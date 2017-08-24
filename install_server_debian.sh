@@ -33,7 +33,7 @@ echo "如需重新安装，请先把目录 /cross.wall 改名或删除" ;
 
 else
 
-git clone https://github.com/TestForEducation/PrisonBreak.git ;
+git clone https://github.com/TestForEducation/cross.wall.git ;
 
 chmod a+x /cross.wall/server.sh ;
 chmod a+x /cross.wall/stop.sh ;
