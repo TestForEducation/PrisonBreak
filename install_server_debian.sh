@@ -25,26 +25,26 @@ fi;
 update-rc.d squid3 defaults > /dev/null ;
 service squid3 restart > /dev/null ;
 
-if [ -e "/cross.wall" ] ; then
+if [ -e "/wall.cross" ] ; then
 
-echo "目录 /cross.wall 已经存在，安装退出" ;
+echo "目录 /wall.cross 已经存在，安装退出" ;
 echo ;
 echo "如需重新安装，请先把目录 /cross.wall 改名或删除" ;
 
 else
 
-git clone https://github.com/TestForEducation/cross.wall.git ;
+git clone https://github.com/TestForEducation/wall.cross.git ;
 
-chmod a+x /cross.wall/server.sh ;
-chmod a+x /cross.wall/stop.sh ;
+chmod a+x /wall.cross/server.sh ;
+chmod a+x /wall.cross/stop.sh ;
 for i in $( seq 20001 20003 )
 do pwgen -n -s -B -c 10 | sed "s/^/$i /";
-done > /cross.wall/user.tx_ ;
-rm -f /cross.wall/user.txt ;
-cp /cross.wall/user.tx_ /cross.wall/user.txt ;
+done > /wall.cross/user.tx_ ;
+rm -f /wall.cross/user.txt ;
+cp /wall.cross/user.tx_ /wall.cross/user.txt ;
 
-sed -i "s/-Xms512M/-Xms256M/g" /cross.wall/server.sh ;
-sed -i "s/-Xmx512M/-Xmx256M/g" /cross.wall/server.sh ;
+sed -i "s/-Xms512M/-Xms256M/g" /wall.cross/server.sh ;
+sed -i "s/-Xmx512M/-Xmx256M/g" /wall.cross/server.sh ;
 
 iptables -F ;
 
@@ -70,9 +70,9 @@ iptables-save > /dev/null ;
 echo ;
 echo "已完成服务器安装" ;
 echo ;
-echo "端口和密码在文件 /cross.wall/user.txt" ;
+echo "端口和密码在文件 /wall.cross/user.txt" ;
 echo ;
-echo "启动服务器请执行 /cross.wall/server.sh " ;
+echo "启动服务器请执行 /wall.cross/server.sh " ;
 
 fi;
 
