@@ -48,11 +48,11 @@ sed -i "s/-Xmx512M/-Xmx256M/g" /cross.wall/server.sh ;
 
 iptables -F ;
 
-iptables -A INPUT -p tcp --dport sshport -j ACCEPT ;
+iptables -A INPUT -p tcp --dport 26461 -j ACCEPT ;
 # iptables -A INPUT -p tcp --dport 80 -j ACCEPT ;
 
-iptables -A INPUT -p tcp --dport yourport -j ACCEPT ;
-iptables -A INPUT -p udp --dport yourport -j ACCEPT ;
+iptables -A INPUT -p tcp --dport 5128 -j ACCEPT ;
+iptables -A INPUT -p udp --dport 5128 -j ACCEPT ;
 
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT ;
 iptables -A INPUT -p tcp --dport 25 -j ACCEPT ;
