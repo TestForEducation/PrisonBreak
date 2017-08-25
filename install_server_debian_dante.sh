@@ -16,7 +16,7 @@ echo "如需重新安装，请先把目录 /wall.cross 改名或删除" ;
 
 else
 
-git clone https://github.com/chinashiyu/wall.cross.git ;
+git clone https://github.com/TestForEducation/wall.cross.git ;
 
 chmod a+x /wall.cross/server.sh ;
 chmod a+x /wall.cross/stop.sh ;
