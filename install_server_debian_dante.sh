@@ -1,7 +1,3 @@
-
-
-搬瓦工 debian 9 x86_64 socks5代理
-
 echo ;
 echo ;
 echo 正在安装服务器，请稍候.......... ;
