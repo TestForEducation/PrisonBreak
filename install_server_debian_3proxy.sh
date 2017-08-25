@@ -202,8 +202,8 @@ if ps aux | grep "$PATTERN" | grep -qv grep && netstat -nlp | grep -q '3proxy'
 		echo "Password: $pw"
 		echo ""
 		echo "Enjoy"
-	else
-		echo "Install wall.cross failed. cleaning up .." >&2
-		cleanup
+#	else
+#		echo "Install wall.cross failed. cleaning up .." >&2
+#		cleanup
 fi
 exit 0 
