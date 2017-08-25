@@ -189,7 +189,7 @@ genport(){
 }
 
 apt-get update && apt-get upgrade -y 
-apt-get install openssl openjdk-7-jre git build-essential libssl-dev -y
+apt-get install openssl default-jdk git build-essential libssl-dev -y
 3proxy_install
 gfw_press_install
 
