@@ -29,22 +29,22 @@ cp /wall.cross/user.tx_ /wall.cross/user.txt ;
 sed -i "s/-Xms512M/-Xms256M/g" /wall.cross/server.sh ;
 sed -i "s/-Xmx512M/-Xmx256M/g" /wall.cross/server.sh ;
 
-iptables -F ;
-iptables -A INPUT -p tcp --dport 26461 -j ACCEPT ;
-iptables -A INPUT -p tcp --dport 5128 -j ACCEPT ;
-iptables -A INPUT -p udp --dport 5128 -j ACCEPT ;
-iptables -A INPUT -p tcp --dport 443 -j ACCEPT ;
-iptables -A INPUT -p tcp --dport 25 -j ACCEPT ;
-iptables -A INPUT -p tcp --dport 110 -j ACCEPT ;
-iptables -A INPUT -p tcp --dport 20001:20003 -j ACCEPT ;
-iptables -A INPUT -p tcp --dport 28040:28050 -j ACCEPT ;
-iptables -P INPUT DROP ;
-iptables -P FORWARD DROP ;
-iptables -P OUTPUT ACCEPT ;
-iptables -A INPUT -i lo -j ACCEPT ;
-iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT ;
-iptables -A INPUT -p icmp -j ACCEPT ;
-iptables-save > /dev/null ;
+# iptables -F ;
+# iptables -A INPUT -p tcp --dport 26461 -j ACCEPT ;
+# iptables -A INPUT -p tcp --dport 5128 -j ACCEPT ;
+# iptables -A INPUT -p udp --dport 5128 -j ACCEPT ;
+# iptables -A INPUT -p tcp --dport 443 -j ACCEPT ;
+# iptables -A INPUT -p tcp --dport 25 -j ACCEPT ;
+# iptables -A INPUT -p tcp --dport 110 -j ACCEPT ;
+# iptables -A INPUT -p tcp --dport 20001:20003 -j ACCEPT ;
+# iptables -A INPUT -p tcp --dport 28040:28050 -j ACCEPT ;
+# iptables -P INPUT DROP ;
+# iptables -P FORWARD DROP ;
+# iptables -P OUTPUT ACCEPT ;
+# iptables -A INPUT -i lo -j ACCEPT ;
+# iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT ;
+# iptables -A INPUT -p icmp -j ACCEPT ;
+# iptables-save > /dev/null ;
 
 fi;
 
